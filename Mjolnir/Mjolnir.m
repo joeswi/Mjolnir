@@ -40,17 +40,69 @@ static Mjolnir *sharedPlugin;
         self.bundle = plugin;
         
         // Create menu items, initialize UI, etc.
-
-        // Sample Menu Item:
-        NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Edit"];
-        if (menuItem) {
-            [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-            NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Do Action" action:@selector(doMenuAction) keyEquivalent:@""];
-            [actionMenuItem setTarget:self];
-            [[menuItem submenu] addItem:actionMenuItem];
+        NSMenuItem *productMenu = [[NSApp mainMenu] itemWithTitle:@"Product"];
+        if (productMenu)
+        {
+            [[productMenu submenu] addItem:[NSMenuItem separatorItem]];
+            
+            // Main Menu: Mjolnir
+            NSMenuItem *mjolnirMenu = [[productMenu submenu] addItemWithTitle:@"Mjolnir"
+                                                                       action:@selector(mjolnirMenuOnClick)
+                                                                keyEquivalent:@""];
+            mjolnirMenu.target = self;
+            mjolnirMenu.submenu = [[NSMenu alloc] initWithTitle:@"Mjolnir"];
+            
+            // Mjolnir -> Http Mock
+            NSMenuItem *httpMock = [[mjolnirMenu submenu] addItemWithTitle:@"Http Mock"
+                                                                    action:@selector(httpMockMenuOnClick)
+                                                             keyEquivalent:@""];
+            httpMock.target = self;
+            
+            // Mjolnir -> CIBuild
+            NSMenuItem *cibuild = [[mjolnirMenu submenu] addItemWithTitle:@"CIBuild"
+                                                                   action:@selector(ciBuildMenuOnClick)
+                                                            keyEquivalent:@""];
+            cibuild.target = self;
+            
+            // Mjolnir -> Analyze
+            NSMenuItem *analyze = [[mjolnirMenu submenu] addItemWithTitle:@"Consistency Analyze"
+                                                                   action:@selector(analyzeMenuOnClick)
+                                                            keyEquivalent:@""];
+            analyze.target = self;
+            
+            // Mjolnir -> GotoCI
+            NSMenuItem *goCI = [[mjolnirMenu submenu] addItemWithTitle:@"Goto CI"
+                                                                action:@selector(gotoCIMenuOnClick)
+                                                         keyEquivalent:@""];
+            goCI.target = self;
         }
     }
     return self;
+}
+
+- (void)mjolnirMenuOnClick
+{
+    
+}
+
+- (void)httpMockMenuOnClick
+{
+    
+}
+
+- (void)ciBuildMenuOnClick
+{
+    
+}
+
+- (void)analyzeMenuOnClick
+{
+    
+}
+
+- (void)gotoCIMenuOnClick
+{
+    NSURL *url = [[NSURL alloc] initWithString:@"http://221.226.48.130:2424/Jenkins"];
 }
 
 // Sample Action, for menu item:
