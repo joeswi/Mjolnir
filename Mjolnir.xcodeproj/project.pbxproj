@@ -1,0 +1,278 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD4EFDE81A032B8A0098C035 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4EFDE71A032B8A0098C035 /* AppKit.framework */; };
+		AD4EFDEA1A032B8A0098C035 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4EFDE91A032B8A0098C035 /* Foundation.framework */; };
+		AD4EFDEF1A032B8A0098C035 /* Mjolnir.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = AD4EFDEE1A032B8A0098C035 /* Mjolnir.xcscheme */; };
+		AD4EFDF21A032B8A0098C035 /* Mjolnir.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4EFDF11A032B8A0098C035 /* Mjolnir.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AD4EFDE41A032B8A0098C035 /* Mjolnir.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mjolnir.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD4EFDE71A032B8A0098C035 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		AD4EFDE91A032B8A0098C035 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		AD4EFDED1A032B8A0098C035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD4EFDEE1A032B8A0098C035 /* Mjolnir.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Mjolnir.xcscheme; path = Mjolnir.xcodeproj/xcshareddata/xcschemes/Mjolnir.xcscheme; sourceTree = SOURCE_ROOT; };
+		AD4EFDF01A032B8A0098C035 /* Mjolnir.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mjolnir.h; sourceTree = "<group>"; };
+		AD4EFDF11A032B8A0098C035 /* Mjolnir.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mjolnir.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD4EFDE21A032B8A0098C035 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD4EFDE81A032B8A0098C035 /* AppKit.framework in Frameworks */,
+				AD4EFDEA1A032B8A0098C035 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD4EFDDB1A032B8A0098C035 = {
+			isa = PBXGroup;
+			children = (
+				AD4EFDEB1A032B8A0098C035 /* Mjolnir */,
+				AD4EFDE61A032B8A0098C035 /* Frameworks */,
+				AD4EFDE51A032B8A0098C035 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD4EFDE51A032B8A0098C035 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD4EFDE41A032B8A0098C035 /* Mjolnir.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD4EFDE61A032B8A0098C035 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD4EFDE71A032B8A0098C035 /* AppKit.framework */,
+				AD4EFDE91A032B8A0098C035 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD4EFDEB1A032B8A0098C035 /* Mjolnir */ = {
+			isa = PBXGroup;
+			children = (
+				AD4EFDF01A032B8A0098C035 /* Mjolnir.h */,
+				AD4EFDF11A032B8A0098C035 /* Mjolnir.m */,
+				AD4EFDEC1A032B8A0098C035 /* Supporting Files */,
+			);
+			path = Mjolnir;
+			sourceTree = "<group>";
+		};
+		AD4EFDEC1A032B8A0098C035 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD4EFDED1A032B8A0098C035 /* Info.plist */,
+				AD4EFDEE1A032B8A0098C035 /* Mjolnir.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD4EFDE31A032B8A0098C035 /* Mjolnir */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD4EFDF51A032B8A0098C035 /* Build configuration list for PBXNativeTarget "Mjolnir" */;
+			buildPhases = (
+				AD4EFDE01A032B8A0098C035 /* Sources */,
+				AD4EFDE11A032B8A0098C035 /* Resources */,
+				AD4EFDE21A032B8A0098C035 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mjolnir;
+			productName = Mjolnir;
+			productReference = AD4EFDE41A032B8A0098C035 /* Mjolnir.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD4EFDDC1A032B8A0098C035 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = XXW;
+				TargetAttributes = {
+					AD4EFDE31A032B8A0098C035 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = AD4EFDDF1A032B8A0098C035 /* Build configuration list for PBXProject "Mjolnir" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AD4EFDDB1A032B8A0098C035;
+			productRefGroup = AD4EFDE51A032B8A0098C035 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD4EFDE31A032B8A0098C035 /* Mjolnir */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD4EFDE11A032B8A0098C035 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD4EFDEF1A032B8A0098C035 /* Mjolnir.xcscheme in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD4EFDE01A032B8A0098C035 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD4EFDF21A032B8A0098C035 /* Mjolnir.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AD4EFDF31A032B8A0098C035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		AD4EFDF41A032B8A0098C035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		AD4EFDF61A032B8A0098C035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = Mjolnir/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		AD4EFDF71A032B8A0098C035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = Mjolnir/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD4EFDDF1A032B8A0098C035 /* Build configuration list for PBXProject "Mjolnir" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD4EFDF31A032B8A0098C035 /* Debug */,
+				AD4EFDF41A032B8A0098C035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD4EFDF51A032B8A0098C035 /* Build configuration list for PBXNativeTarget "Mjolnir" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD4EFDF61A032B8A0098C035 /* Debug */,
+				AD4EFDF71A032B8A0098C035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD4EFDDC1A032B8A0098C035 /* Project object */;
+}
