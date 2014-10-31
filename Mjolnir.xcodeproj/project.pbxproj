@@ -11,6 +11,12 @@
 		AD4EFDEA1A032B8A0098C035 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4EFDE91A032B8A0098C035 /* Foundation.framework */; };
 		AD4EFDEF1A032B8A0098C035 /* Mjolnir.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = AD4EFDEE1A032B8A0098C035 /* Mjolnir.xcscheme */; };
 		AD4EFDF21A032B8A0098C035 /* Mjolnir.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4EFDF11A032B8A0098C035 /* Mjolnir.m */; };
+		AD927F2C1A036C5C00C86221 /* CCPDocumentationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD927F211A036C5C00C86221 /* CCPDocumentationManager.m */; };
+		AD927F2D1A036C5C00C86221 /* CCPProject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD927F231A036C5C00C86221 /* CCPProject.m */; };
+		AD927F2E1A036C5C00C86221 /* CCPRunOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD927F251A036C5C00C86221 /* CCPRunOperation.m */; };
+		AD927F2F1A036C5C00C86221 /* CCPShellHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD927F271A036C5C00C86221 /* CCPShellHandler.m */; };
+		AD927F301A036C5C00C86221 /* CCPWorkspaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD927F291A036C5C00C86221 /* CCPWorkspaceManager.m */; };
+		AD927F311A036C5C00C86221 /* CCPXCodeConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = AD927F2B1A036C5C00C86221 /* CCPXCodeConsole.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +27,19 @@
 		AD4EFDEE1A032B8A0098C035 /* Mjolnir.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Mjolnir.xcscheme; path = Mjolnir.xcodeproj/xcshareddata/xcschemes/Mjolnir.xcscheme; sourceTree = SOURCE_ROOT; };
 		AD4EFDF01A032B8A0098C035 /* Mjolnir.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mjolnir.h; sourceTree = "<group>"; };
 		AD4EFDF11A032B8A0098C035 /* Mjolnir.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mjolnir.m; sourceTree = "<group>"; };
+		AD927F201A036C5C00C86221 /* CCPDocumentationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPDocumentationManager.h; sourceTree = "<group>"; };
+		AD927F211A036C5C00C86221 /* CCPDocumentationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPDocumentationManager.m; sourceTree = "<group>"; };
+		AD927F221A036C5C00C86221 /* CCPProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPProject.h; sourceTree = "<group>"; };
+		AD927F231A036C5C00C86221 /* CCPProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPProject.m; sourceTree = "<group>"; };
+		AD927F241A036C5C00C86221 /* CCPRunOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPRunOperation.h; sourceTree = "<group>"; };
+		AD927F251A036C5C00C86221 /* CCPRunOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPRunOperation.m; sourceTree = "<group>"; };
+		AD927F261A036C5C00C86221 /* CCPShellHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPShellHandler.h; sourceTree = "<group>"; };
+		AD927F271A036C5C00C86221 /* CCPShellHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPShellHandler.m; sourceTree = "<group>"; };
+		AD927F281A036C5C00C86221 /* CCPWorkspaceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPWorkspaceManager.h; sourceTree = "<group>"; };
+		AD927F291A036C5C00C86221 /* CCPWorkspaceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPWorkspaceManager.m; sourceTree = "<group>"; };
+		AD927F2A1A036C5C00C86221 /* CCPXCodeConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPXCodeConsole.h; sourceTree = "<group>"; };
+		AD927F2B1A036C5C00C86221 /* CCPXCodeConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPXCodeConsole.m; sourceTree = "<group>"; };
+		AD927F321A036CF200C86221 /* MjoInir.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MjoInir.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +84,7 @@
 		AD4EFDEB1A032B8A0098C035 /* Mjolnir */ = {
 			isa = PBXGroup;
 			children = (
+				AD927F1F1A036C5C00C86221 /* Helpers */,
 				AD4EFDF01A032B8A0098C035 /* Mjolnir.h */,
 				AD4EFDF11A032B8A0098C035 /* Mjolnir.m */,
 				AD4EFDEC1A032B8A0098C035 /* Supporting Files */,
@@ -77,8 +97,28 @@
 			children = (
 				AD4EFDED1A032B8A0098C035 /* Info.plist */,
 				AD4EFDEE1A032B8A0098C035 /* Mjolnir.xcscheme */,
+				AD927F321A036CF200C86221 /* MjoInir.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD927F1F1A036C5C00C86221 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AD927F201A036C5C00C86221 /* CCPDocumentationManager.h */,
+				AD927F211A036C5C00C86221 /* CCPDocumentationManager.m */,
+				AD927F221A036C5C00C86221 /* CCPProject.h */,
+				AD927F231A036C5C00C86221 /* CCPProject.m */,
+				AD927F241A036C5C00C86221 /* CCPRunOperation.h */,
+				AD927F251A036C5C00C86221 /* CCPRunOperation.m */,
+				AD927F261A036C5C00C86221 /* CCPShellHandler.h */,
+				AD927F271A036C5C00C86221 /* CCPShellHandler.m */,
+				AD927F281A036C5C00C86221 /* CCPWorkspaceManager.h */,
+				AD927F291A036C5C00C86221 /* CCPWorkspaceManager.m */,
+				AD927F2A1A036C5C00C86221 /* CCPXCodeConsole.h */,
+				AD927F2B1A036C5C00C86221 /* CCPXCodeConsole.m */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,7 +188,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD927F301A036C5C00C86221 /* CCPWorkspaceManager.m in Sources */,
+				AD927F2E1A036C5C00C86221 /* CCPRunOperation.m in Sources */,
+				AD927F2F1A036C5C00C86221 /* CCPShellHandler.m in Sources */,
+				AD927F311A036C5C00C86221 /* CCPXCodeConsole.m in Sources */,
 				AD4EFDF21A032B8A0098C035 /* Mjolnir.m in Sources */,
+				AD927F2C1A036C5C00C86221 /* CCPDocumentationManager.m in Sources */,
+				AD927F2D1A036C5C00C86221 /* CCPProject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +317,7 @@
 				AD4EFDF71A032B8A0098C035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

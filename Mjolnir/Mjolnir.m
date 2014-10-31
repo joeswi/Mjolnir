@@ -7,6 +7,7 @@
 //
 
 #import "Mjolnir.h"
+#import "CCPShellHandler.h"
 
 static Mjolnir *sharedPlugin;
 
@@ -47,9 +48,8 @@ static Mjolnir *sharedPlugin;
             
             // Main Menu: Mjolnir
             NSMenuItem *mjolnirMenu = [[productMenu submenu] addItemWithTitle:@"Mjolnir"
-                                                                       action:@selector(mjolnirMenuOnClick)
+                                                                       action:nil
                                                                 keyEquivalent:@""];
-            mjolnirMenu.target = self;
             mjolnirMenu.submenu = [[NSMenu alloc] initWithTitle:@"Mjolnir"];
             
             // Mjolnir -> Http Mock
@@ -97,7 +97,13 @@ static Mjolnir *sharedPlugin;
 
 - (void)analyzeMenuOnClick
 {
-    
+    [CCPShellHandler runShellCommand:[[self gemPath]stringByAppendingPathComponent:POD_EXECUTABLE]
+                            withArgs:@[@"install"]
+                           directory:[CCPWorkspaceManager currentWorkspaceDirectoryPath]
+                          completion: ^(NSTask *t) {
+                              if ([self shouldInstallDocsForPods])
+                                  [self installOrUpdateDocSetsForPods];
+                          }];
 }
 
 - (void)gotoCIMenuOnClick
