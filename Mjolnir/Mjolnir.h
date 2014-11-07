@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 XXW. All rights reserved.
 //
 
-
+#import <Foundation/Foundation.h>
 
 @interface Mjolnir : NSObject
 

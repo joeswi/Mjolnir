@@ -21,6 +21,9 @@
 //  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 //  IN THE SOFTWARE.
 
+#import <Foundation/Foundation.h>
+#import <AppKit/AppKit.h>
+
 @interface CCPWorkspaceManager : NSObject
 
 + (id)workspaceForKeyWindow;

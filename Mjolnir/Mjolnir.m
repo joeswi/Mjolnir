@@ -6,8 +6,10 @@
 //    Copyright (c) 2014年 XXW. All rights reserved.
 //
 
+#import <AppKit/AppKit.h>
 #import "Mjolnir.h"
 #import "CCPShellHandler.h"
+#import "CCPWorkspaceManager.h"
 
 static Mjolnir *sharedPlugin;
 
@@ -97,18 +99,23 @@ static Mjolnir *sharedPlugin;
 
 - (void)analyzeMenuOnClick
 {
-    [CCPShellHandler runShellCommand:[[self gemPath]stringByAppendingPathComponent:POD_EXECUTABLE]
-                            withArgs:@[@"install"]
-                           directory:[CCPWorkspaceManager currentWorkspaceDirectoryPath]
-                          completion: ^(NSTask *t) {
-                              if ([self shouldInstallDocsForPods])
-                                  [self installOrUpdateDocSetsForPods];
-                          }];
+//    [CCPShellHandler runShellCommand:[[self gemPath] stringByAppendingPathComponent:POD_EXECUTABLE]
+//                            withArgs:@[@"install"]
+//                           directory:[CCPWorkspaceManager currentWorkspaceDirectoryPath]
+//                          completion: ^(NSTask *t) {
+//                              if ([self shouldInstallDocsForPods])
+//                                  [self installOrUpdateDocSetsForPods];
+//                          }];
+    
+    
+    NSAlert *alert = [NSAlert alertWithMessageText:[CCPWorkspaceManager currentWorkspaceDirectoryPath] defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
+    [alert runModal];
 }
 
 - (void)gotoCIMenuOnClick
 {
-    NSURL *url = [[NSURL alloc] initWithString:@"http://221.226.48.130:2424/Jenkins"];
+    NSURL *url = [[NSURL alloc] initWithString:@"http://221.226.48.130:2424/jenkins"];
+    [[NSWorkspace sharedWorkspace] openURL:url];
 }
 
 // Sample Action, for menu item:

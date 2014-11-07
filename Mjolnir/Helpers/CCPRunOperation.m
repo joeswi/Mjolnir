@@ -22,6 +22,7 @@
 //  IN THE SOFTWARE.
 
 #import "CCPRunOperation.h"
+#import "CCPXCodeConsole.h"
 
 @interface CCPRunOperation ()
 {
