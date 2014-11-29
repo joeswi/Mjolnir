@@ -72,11 +72,23 @@ static Mjolnir *sharedPlugin;
                                                             keyEquivalent:@""];
             analyze.target = self;
             
-            // Mjolnir -> GotoCI
-            NSMenuItem *goCI = [[mjolnirMenu submenu] addItemWithTitle:@"Goto CI"
+            
+            // Mjolnir -> Goto
+            NSMenuItem *gotoMenu = [[mjolnirMenu submenu] addItemWithTitle:@"Goto" action:nil keyEquivalent:@""];
+            gotoMenu.submenu = [[NSMenu alloc] initWithTitle:@"Goto"];
+            
+            
+            // Mjolnir -> Goto -> Continuous Integration
+            NSMenuItem *gotoCI = [[gotoMenu submenu] addItemWithTitle:@"Continuous Integration"
                                                                 action:@selector(gotoCIMenuOnClick)
                                                          keyEquivalent:@""];
-            goCI.target = self;
+            gotoCI.target = self;
+            
+            // Mjolnir -> Goto -> Crash Explorer
+            NSMenuItem *gotoCrashExplorer = [[gotoMenu submenu] addItemWithTitle:@"Crash Explorer"
+                                                               action:@selector(gotoCrashExplorerMenuOnClick)
+                                                        keyEquivalent:@""];
+            gotoCrashExplorer.target = self;
         }
     }
     return self;
@@ -108,13 +120,23 @@ static Mjolnir *sharedPlugin;
 //                          }];
     
     
-    NSAlert *alert = [NSAlert alertWithMessageText:[CCPWorkspaceManager currentWorkspaceDirectoryPath] defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
+    NSAlert *alert = [NSAlert alertWithMessageText:[CCPWorkspaceManager currentWorkspaceDirectoryPath]
+                                     defaultButton:nil
+                                   alternateButton:nil
+                                       otherButton:nil
+                         informativeTextWithFormat:@""];
     [alert runModal];
 }
 
 - (void)gotoCIMenuOnClick
 {
     NSURL *url = [[NSURL alloc] initWithString:@"http://221.226.48.130:2424/jenkins"];
+    [[NSWorkspace sharedWorkspace] openURL:url];
+}
+
+- (void)gotoCrashExplorerMenuOnClick
+{
+    NSURL *url = [[NSURL alloc] initWithString:@"http://221.226.48.130:2424/CrashExplorer"];
     [[NSWorkspace sharedWorkspace] openURL:url];
 }
 
