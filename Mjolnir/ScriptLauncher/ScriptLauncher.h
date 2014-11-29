@@ -12,6 +12,6 @@
 
 + (ScriptLauncher *)defaultLauncher;
 
-- (void)execute:(NSString *)cmd;
+- (void)execute:(NSArray *)cmdList;
 
 @end

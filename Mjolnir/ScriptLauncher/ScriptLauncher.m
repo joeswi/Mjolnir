@@ -22,8 +22,14 @@
     return _sharedObject;
 }
 
-- (void)execute:(NSString *)cmd
+- (void)execute:(NSArray *)cmdList
 {
+    NSMutableString *cmd = [[NSMutableString alloc] init];
+    for (NSString *cmdListItem in cmdList)
+    {
+        [cmd appendString:[NSString stringWithFormat:@"%@ ;", cmdListItem]];
+    }
+    
     NSString *osascript = ScriptLauncherScpt;
     if (osascript)
     {

@@ -37,6 +37,11 @@ static Mjolnir *sharedPlugin;
     return sharedPlugin;
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (id)initWithBundle:(NSBundle *)plugin
 {
     if (self = [super init]) {
@@ -95,14 +100,20 @@ static Mjolnir *sharedPlugin;
     return self;
 }
 
-- (void)mjolnirMenuOnClick
-{
-    
-}
-
 - (void)httpMockMenuOnClick
 {
-    
+    NSString *httpMockRoot = [[CCPWorkspaceManager currentWorkspaceDirectoryPath] stringByAppendingPathComponent:@"HttpServiceMock"];
+    BOOL isDir = NO;
+    if ([[NSFileManager defaultManager] fileExistsAtPath:httpMockRoot isDirectory:&isDir] && isDir)
+    {
+        NSString *httpMockStart = [httpMockRoot stringByAppendingPathComponent:@"rbt/start.sh"];
+        [[ScriptLauncher defaultLauncher] execute:@[[NSString stringWithFormat:@"cd %@", [httpMockRoot stringByAppendingPathComponent:@"rbt"]],
+                                                    [NSString stringWithFormat:@"sh %@", httpMockStart]]];
+    }
+    else
+    {
+        [self showMessage:@"Error, Can't find http mock script"];
+    }
 }
 
 - (void)ciBuildMenuOnClick
@@ -113,49 +124,10 @@ static Mjolnir *sharedPlugin;
 - (void)analyzeMenuOnClick
 {
     
-    
-//    NSString *cibuildRoot = [[CCPWorkspaceManager currentWorkspaceDirectoryPath] stringByAppendingPathComponent:@"CIBuild"];
-//    BOOL isDir = NO;
-//    if ([[NSFileManager defaultManager] fileExistsAtPath:cibuildRoot isDirectory:&isDir])
-//    {
-//        if (isDir)
-//        {
-//            [self showMessage:cibuildRoot];
-//            [CCPShellHandler runShellCommand:[cibuildRoot stringByAppendingPathComponent:@"xcpa.py"]
-//                                    withArgs:@[@""]
-//                                   directory:cibuildRoot
-//                                  completion: ^(NSTask *t) {
-//                                      [self showMessage:t.description];
-//                                  }];
-//            return;
-//        }
-//    }
-    
-    NSString *cibuildRoot = [[CCPWorkspaceManager currentWorkspaceDirectoryPath] stringByAppendingPathComponent:@"HttpServiceMock"];
-    BOOL isDir = NO;
-    if ([[NSFileManager defaultManager] fileExistsAtPath:cibuildRoot isDirectory:&isDir])
-    {
-        if (isDir)
-        {
-            [self showMessage:[cibuildRoot stringByAppendingPathComponent:@"rbt/start.sh"]];
-            [CCPShellHandler runShellCommand:@"/bin/sh"
-                                    withArgs:@[[cibuildRoot stringByAppendingPathComponent:@"rbt/start.sh"]]
-                                   directory:[cibuildRoot stringByAppendingPathComponent:@"rbt"]
-                                  completion: ^(NSTask *t) {
-                                      [self showMessage:t.description];
-                                  }];
-            return;
-        }
-    }
-
-    [self showMessage:@"error"];
 }
 
 - (void)gotoCIMenuOnClick
 {
-    [[ScriptLauncher defaultLauncher] execute:@"cd /; ls"];
-    
-    
     NSURL *url = [[NSURL alloc] initWithString:@"http://221.226.48.130:2424/jenkins"];
     [[NSWorkspace sharedWorkspace] openURL:url];
 }
@@ -164,18 +136,6 @@ static Mjolnir *sharedPlugin;
 {
     NSURL *url = [[NSURL alloc] initWithString:@"http://221.226.48.130:2424/CrashExplorer"];
     [[NSWorkspace sharedWorkspace] openURL:url];
-}
-
-// Sample Action, for menu item:
-- (void)doMenuAction
-{
-    NSAlert *alert = [NSAlert alertWithMessageText:@"Hello, World" defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
-    [alert runModal];
-}
-
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)showMessage:(NSString *)message
