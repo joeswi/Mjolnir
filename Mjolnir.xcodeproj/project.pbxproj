@@ -17,6 +17,8 @@
 		AD927F2F1A036C5C00C86221 /* CCPShellHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD927F271A036C5C00C86221 /* CCPShellHandler.m */; };
 		AD927F301A036C5C00C86221 /* CCPWorkspaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD927F291A036C5C00C86221 /* CCPWorkspaceManager.m */; };
 		AD927F311A036C5C00C86221 /* CCPXCodeConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = AD927F2B1A036C5C00C86221 /* CCPXCodeConsole.m */; };
+		ADA138381A29834D009D8CE3 /* ScriptLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA138361A29834D009D8CE3 /* ScriptLauncher.m */; };
+		ADA1383A1A298382009D8CE3 /* ScriptLauncher.scpt in Resources */ = {isa = PBXBuildFile; fileRef = ADA138371A29834D009D8CE3 /* ScriptLauncher.scpt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,9 @@
 		AD927F2A1A036C5C00C86221 /* CCPXCodeConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPXCodeConsole.h; sourceTree = "<group>"; };
 		AD927F2B1A036C5C00C86221 /* CCPXCodeConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPXCodeConsole.m; sourceTree = "<group>"; };
 		AD927F321A036CF200C86221 /* MjoInir.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MjoInir.pch; sourceTree = "<group>"; };
+		ADA138351A29834D009D8CE3 /* ScriptLauncher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScriptLauncher.h; sourceTree = "<group>"; };
+		ADA138361A29834D009D8CE3 /* ScriptLauncher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScriptLauncher.m; sourceTree = "<group>"; };
+		ADA138371A29834D009D8CE3 /* ScriptLauncher.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ScriptLauncher.scpt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +89,7 @@
 		AD4EFDEB1A032B8A0098C035 /* Mjolnir */ = {
 			isa = PBXGroup;
 			children = (
+				ADA138341A29834D009D8CE3 /* ScriptLauncher */,
 				AD927F1F1A036C5C00C86221 /* Helpers */,
 				AD4EFDF01A032B8A0098C035 /* Mjolnir.h */,
 				AD4EFDF11A032B8A0098C035 /* Mjolnir.m */,
@@ -119,6 +125,16 @@
 				AD927F2B1A036C5C00C86221 /* CCPXCodeConsole.m */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		ADA138341A29834D009D8CE3 /* ScriptLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				ADA138351A29834D009D8CE3 /* ScriptLauncher.h */,
+				ADA138361A29834D009D8CE3 /* ScriptLauncher.m */,
+				ADA138371A29834D009D8CE3 /* ScriptLauncher.scpt */,
+			);
+			path = ScriptLauncher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADA1383A1A298382009D8CE3 /* ScriptLauncher.scpt in Resources */,
 				AD4EFDEF1A032B8A0098C035 /* Mjolnir.xcscheme in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +210,7 @@
 				AD927F2F1A036C5C00C86221 /* CCPShellHandler.m in Sources */,
 				AD927F311A036C5C00C86221 /* CCPXCodeConsole.m in Sources */,
 				AD4EFDF21A032B8A0098C035 /* Mjolnir.m in Sources */,
+				ADA138381A29834D009D8CE3 /* ScriptLauncher.m in Sources */,
 				AD927F2C1A036C5C00C86221 /* CCPDocumentationManager.m in Sources */,
 				AD927F2D1A036C5C00C86221 /* CCPProject.m in Sources */,
 			);
