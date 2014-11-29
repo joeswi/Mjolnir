@@ -60,12 +60,6 @@ static Mjolnir *sharedPlugin;
                                                                 keyEquivalent:@""];
             mjolnirMenu.submenu = [[NSMenu alloc] initWithTitle:@"Mjolnir"];
             
-            // Mjolnir -> Http Mock
-            NSMenuItem *httpMock = [[mjolnirMenu submenu] addItemWithTitle:@"Http Mock"
-                                                                    action:@selector(httpMockMenuOnClick)
-                                                             keyEquivalent:@""];
-            httpMock.target = self;
-            
             // Mjolnir -> CIBuild
             NSMenuItem *cibuild = [[mjolnirMenu submenu] addItemWithTitle:@"CIBuild"
                                                                    action:@selector(ciBuildMenuOnClick)
@@ -77,7 +71,12 @@ static Mjolnir *sharedPlugin;
                                                                    action:@selector(analyzeMenuOnClick)
                                                             keyEquivalent:@""];
             analyze.target = self;
-            
+   
+            // Mjolnir -> Http Mock
+            NSMenuItem *httpMock = [[mjolnirMenu submenu] addItemWithTitle:@"HTTP Service Mock"
+                                                                    action:@selector(httpMockMenuOnClick)
+                                                             keyEquivalent:@""];
+            httpMock.target = self;
             
             // Mjolnir -> Goto
             NSMenuItem *gotoMenu = [[mjolnirMenu submenu] addItemWithTitle:@"Goto" action:nil keyEquivalent:@""];
