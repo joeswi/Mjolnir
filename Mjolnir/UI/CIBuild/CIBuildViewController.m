@@ -8,7 +8,9 @@
 
 #import "CIBuildViewController.h"
 
-@interface CIBuildViewController ()
+@interface CIBuildViewController () <NSComboBoxDelegate, NSComboBoxDataSource>
+
+@property (weak) IBOutlet NSComboBox *targetComboBox;
 
 @end
 
@@ -24,10 +26,32 @@
     [self dismiss];
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
+    
+    self.targetComboBox.delegate = self;
+    self.targetComboBox.dataSource = self;
+    [self.targetComboBox selectItemAtIndex:0];
+}
+
+#pragma mark - NSComboBoxDataSource
+
+- (NSInteger)numberOfItemsInComboBox:(NSComboBox *)aComboBox
+{
+    return 3;
+}
+
+- (id)comboBox:(NSComboBox *)aComboBox objectValueForItemAtIndex:(NSInteger)index
+{
+    return [NSString stringWithFormat:@"%ld", index];
+}
+
+#pragma mark - NSComboBoxDelegate
+
+- (void)comboBoxSelectionDidChange:(NSNotification *)notification
+{
+    
 }
 
 @end
