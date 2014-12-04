@@ -19,6 +19,12 @@
     [self dismiss];
 }
 
+- (IBAction)OKButtonOnClicked:(id)sender
+{
+    [self dismiss];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
