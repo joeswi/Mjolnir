@@ -1,5 +1,5 @@
 //
-//  CIBuildViewController.h
+//  BaseViewController.h
 //  Mjolnir
 //
 //  Created by 夏 小为 on 14/12/4.
@@ -7,8 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "BaseViewController.h"
 
-@interface CIBuildViewController : BaseViewController
+@interface BaseViewController : NSViewController
+
+- (void)present;
+
+- (void)dismiss;
 
 @end

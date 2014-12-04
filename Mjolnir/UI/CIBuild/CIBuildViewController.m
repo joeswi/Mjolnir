@@ -14,14 +14,9 @@
 
 @implementation CIBuildViewController
 
-- (id)init
+- (IBAction)CancelButtonOnClicked:(id)sender
 {
-    self = [super initWithNibName:NSStringFromClass(self.class) bundle:[NSBundle bundleForClass:[self class]]];
-    if (self)
-    {
-        [self.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
-    }
-    return self;
+    [self dismiss];
 }
 
 - (void)viewDidLoad {

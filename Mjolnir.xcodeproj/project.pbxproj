@@ -23,6 +23,7 @@
 		AD927F311A036C5C00C86221 /* CCPXCodeConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = AD927F2B1A036C5C00C86221 /* CCPXCodeConsole.m */; };
 		ADA138381A29834D009D8CE3 /* ScriptLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA138361A29834D009D8CE3 /* ScriptLauncher.m */; };
 		ADA1383A1A298382009D8CE3 /* ScriptLauncher.scpt in Resources */ = {isa = PBXBuildFile; fileRef = ADA138371A29834D009D8CE3 /* ScriptLauncher.scpt */; };
+		ADCBF5BF1A305D5B00F992E3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCBF5BE1A305D5B00F992E3 /* BaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		ADA138351A29834D009D8CE3 /* ScriptLauncher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScriptLauncher.h; sourceTree = "<group>"; };
 		ADA138361A29834D009D8CE3 /* ScriptLauncher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScriptLauncher.m; sourceTree = "<group>"; };
 		ADA138371A29834D009D8CE3 /* ScriptLauncher.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ScriptLauncher.scpt; sourceTree = "<group>"; };
+		ADCBF5BD1A305D5B00F992E3 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		ADCBF5BE1A305D5B00F992E3 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,7 @@
 		AD634F4D1A304DEF00E1D5F0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				ADCBF5BC1A305D1000F992E3 /* Common */,
 				AD634F561A304FE400E1D5F0 /* CIBuild */,
 				AD634F501A304E3E00E1D5F0 /* MainWindowController.h */,
 				AD634F511A304E3E00E1D5F0 /* MainWindowController.m */,
@@ -167,6 +171,15 @@
 				ADA138371A29834D009D8CE3 /* ScriptLauncher.scpt */,
 			);
 			path = ScriptLauncher;
+			sourceTree = "<group>";
+		};
+		ADCBF5BC1A305D1000F992E3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				ADCBF5BD1A305D5B00F992E3 /* BaseViewController.h */,
+				ADCBF5BE1A305D5B00F992E3 /* BaseViewController.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +254,7 @@
 			files = (
 				AD927F301A036C5C00C86221 /* CCPWorkspaceManager.m in Sources */,
 				AD927F2E1A036C5C00C86221 /* CCPRunOperation.m in Sources */,
+				ADCBF5BF1A305D5B00F992E3 /* BaseViewController.m in Sources */,
 				AD927F2F1A036C5C00C86221 /* CCPShellHandler.m in Sources */,
 				AD927F311A036C5C00C86221 /* CCPXCodeConsole.m in Sources */,
 				AD4EFDF21A032B8A0098C035 /* Mjolnir.m in Sources */,
