@@ -24,6 +24,7 @@
 		ADA138381A29834D009D8CE3 /* ScriptLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA138361A29834D009D8CE3 /* ScriptLauncher.m */; };
 		ADA1383A1A298382009D8CE3 /* ScriptLauncher.scpt in Resources */ = {isa = PBXBuildFile; fileRef = ADA138371A29834D009D8CE3 /* ScriptLauncher.scpt */; };
 		ADCBF5BF1A305D5B00F992E3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCBF5BE1A305D5B00F992E3 /* BaseViewController.m */; };
+		ADF7B4D11A309AF400EE37BE /* DirectoryUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF7B4D01A309AF400EE37BE /* DirectoryUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		ADA138371A29834D009D8CE3 /* ScriptLauncher.scpt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ScriptLauncher.scpt; sourceTree = "<group>"; };
 		ADCBF5BD1A305D5B00F992E3 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		ADCBF5BE1A305D5B00F992E3 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		ADF7B4CF1A309AF400EE37BE /* DirectoryUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryUtil.h; sourceTree = "<group>"; };
+		ADF7B4D01A309AF400EE37BE /* DirectoryUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 				AD634F4D1A304DEF00E1D5F0 /* UI */,
 				AD4EFDF01A032B8A0098C035 /* Mjolnir.h */,
 				AD4EFDF11A032B8A0098C035 /* Mjolnir.m */,
+				ADF7B4CF1A309AF400EE37BE /* DirectoryUtil.h */,
+				ADF7B4D01A309AF400EE37BE /* DirectoryUtil.m */,
 				AD4EFDEC1A032B8A0098C035 /* Supporting Files */,
 			);
 			path = Mjolnir;
@@ -257,6 +262,7 @@
 				ADCBF5BF1A305D5B00F992E3 /* BaseViewController.m in Sources */,
 				AD927F2F1A036C5C00C86221 /* CCPShellHandler.m in Sources */,
 				AD927F311A036C5C00C86221 /* CCPXCodeConsole.m in Sources */,
+				ADF7B4D11A309AF400EE37BE /* DirectoryUtil.m in Sources */,
 				AD4EFDF21A032B8A0098C035 /* Mjolnir.m in Sources */,
 				ADA138381A29834D009D8CE3 /* ScriptLauncher.m in Sources */,
 				AD634F531A304E3E00E1D5F0 /* MainWindowController.m in Sources */,
