@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "MainWindowController.h"
 
 @interface BaseViewController ()
 
@@ -31,7 +32,7 @@
 
 - (void)present
 {
-    
+    [MainWindowController showViewController:self];
 }
 
 - (void)dismiss

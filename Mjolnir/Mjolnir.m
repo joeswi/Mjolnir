@@ -121,7 +121,7 @@ static Mjolnir *sharedPlugin;
 - (void)ciBuildMenuOnClick
 {
     CIBuildViewController *cibuild = [[CIBuildViewController alloc] init];
-    [MainWindowController showViewController:cibuild];
+    [cibuild present];
 }
 
 - (void)analyzeMenuOnClick
