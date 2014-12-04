@@ -15,4 +15,6 @@
 #import <AppKit/AppKit.h>
 #import <Foundation/Foundation.h>
 
+#import "PathsUtil.h"
+
 #endif

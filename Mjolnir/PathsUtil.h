@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DirectoryUtil : NSObject
+@interface PathsUtil : NSObject
+
++ (NSString *)currentWorkspacePath;
+
++ (NSString *)httpServiceMockPath;
 
 @end

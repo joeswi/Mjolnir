@@ -104,7 +104,7 @@ static Mjolnir *sharedPlugin;
 
 - (void)httpMockMenuOnClick
 {
-    NSString *httpMockRoot = [[CCPWorkspaceManager currentWorkspaceDirectoryPath] stringByAppendingPathComponent:@"HttpServiceMock"];
+    NSString *httpMockRoot = [[PathsUtil currentWorkspacePath] stringByAppendingPathComponent:@"HttpServiceMock"];
     BOOL isDir = NO;
     if ([[NSFileManager defaultManager] fileExistsAtPath:httpMockRoot isDirectory:&isDir] && isDir)
     {
