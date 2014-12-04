@@ -10,8 +10,18 @@
 
 @interface PathsUtil : NSObject
 
-+ (NSString *)currentWorkspacePath;
++ (NSString *)currentWorkspace;
 
-+ (NSString *)httpServiceMockPath;
+#pragma mark - Http Service Mock Path
+
++ (NSString *)httpServiceMock;
+
++ (NSString *)httpServiceMockStartScript;
+
++ (NSString *)httpServiceMockStartScriptBaseDir;
+
+#pragma mark - Script Launcher Path
+
++ (NSString *)scriptLauncherScpt;
 
 @end

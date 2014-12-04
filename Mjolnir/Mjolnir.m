@@ -13,6 +13,7 @@
 #import "CCPWorkspaceManager.h"
 #import "MainWindowController.h"
 #import "CIBuildViewController.h"
+#import "PathsUtil.h"
 
 static Mjolnir *sharedPlugin;
 
@@ -104,13 +105,12 @@ static Mjolnir *sharedPlugin;
 
 - (void)httpMockMenuOnClick
 {
-    NSString *httpMockRoot = [[PathsUtil currentWorkspacePath] stringByAppendingPathComponent:@"HttpServiceMock"];
+    NSString *httpMockRoot = [PathsUtil httpServiceMock];
     BOOL isDir = NO;
     if ([[NSFileManager defaultManager] fileExistsAtPath:httpMockRoot isDirectory:&isDir] && isDir)
     {
-        NSString *httpMockStart = [httpMockRoot stringByAppendingPathComponent:@"rbt/start.sh"];
-        [[ScriptLauncher defaultLauncher] execute:@[[NSString stringWithFormat:@"cd %@", [httpMockRoot stringByAppendingPathComponent:@"rbt"]],
-                                                    [NSString stringWithFormat:@"sh %@", httpMockStart]]];
+        [[ScriptLauncher defaultLauncher] execute:@[[NSString stringWithFormat:@"cd %@", [PathsUtil httpServiceMockStartScriptBaseDir]],
+                                                    [NSString stringWithFormat:@"sh %@", [PathsUtil httpServiceMockStartScript]]]];
     }
     else
     {

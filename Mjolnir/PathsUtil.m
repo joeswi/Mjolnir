@@ -11,14 +11,30 @@
 
 @implementation PathsUtil
 
-+ (NSString *)currentWorkspacePath
++ (NSString *)currentWorkspace
 {
     return [CCPWorkspaceManager currentWorkspaceDirectoryPath];
 }
 
-+ (NSString *)httpServiceMockPath
++ (NSString *)httpServiceMock
 {
-    return nil;
+    NSString *httpMockRoot = [[PathsUtil currentWorkspace] stringByAppendingPathComponent:@"HttpServiceMock"];
+    return httpMockRoot;
+}
+
++ (NSString *)httpServiceMockStartScript
+{
+    return [[PathsUtil httpServiceMockStartScriptBaseDir] stringByAppendingPathComponent:@"start.sh"];
+}
+
++ (NSString *)httpServiceMockStartScriptBaseDir
+{
+    return [[PathsUtil httpServiceMock] stringByAppendingPathComponent:@"rbt"];
+}
+
++ (NSString *)scriptLauncherScpt
+{
+    return @"/Users/xxw/Library/Application Support/Developer/Shared/Xcode/Plug-ins/Mjolnir.xcplugin/Contents/Resources/ScriptLauncher.scpt";
 }
 
 @end

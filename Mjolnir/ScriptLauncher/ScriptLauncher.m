@@ -7,8 +7,7 @@
 //
 
 #import "ScriptLauncher.h"
-
-#define ScriptLauncherScpt  @"/Users/xxw/Library/Application Support/Developer/Shared/Xcode/Plug-ins/Mjolnir.xcplugin/Contents/Resources/ScriptLauncher.scpt"
+#import "PathsUtil.h"
 
 @implementation ScriptLauncher
 
@@ -30,7 +29,7 @@
         [cmd appendString:[NSString stringWithFormat:@"%@ ;", cmdListItem]];
     }
     
-    NSString *osascript = ScriptLauncherScpt;
+    NSString *osascript = [PathsUtil scriptLauncherScpt];
     if (osascript)
     {
         NSTask *task = [NSTask launchedTaskWithLaunchPath:@"/usr/bin/osascript"
