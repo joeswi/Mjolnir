@@ -16,10 +16,33 @@
     return [CCPWorkspaceManager currentWorkspaceDirectoryPath];
 }
 
+#pragma mark - CIBuild Path
+
++ (NSString *)ciBuild
+{
+    return [[PathsUtil currentWorkspace] stringByAppendingPathComponent:@"CIBuild"];
+}
+
++ (NSString *)ciBuildScript
+{
+    return [[PathsUtil ciBuild] stringByAppendingPathComponent:@"cibuild.py"];
+}
+
++ (NSString *)ciBuildSettings
+{
+    return [[PathsUtil ciBuild] stringByAppendingPathComponent:@"settings.py"];
+}
+
++ (NSString *)ciBuildUpdate
+{
+    return [[PathsUtil ciBuild] stringByAppendingPathComponent:@"update.py"];
+}
+
+#pragma mark - Http Service Mock Path
+
 + (NSString *)httpServiceMock
 {
-    NSString *httpMockRoot = [[PathsUtil currentWorkspace] stringByAppendingPathComponent:@"HttpServiceMock"];
-    return httpMockRoot;
+    return [[PathsUtil currentWorkspace] stringByAppendingPathComponent:@"HttpServiceMock"];
 }
 
 + (NSString *)httpServiceMockStartScript
@@ -31,6 +54,8 @@
 {
     return [[PathsUtil httpServiceMock] stringByAppendingPathComponent:@"rbt"];
 }
+
+#pragma mark - Script Launcher Path
 
 + (NSString *)scriptLauncherScpt
 {

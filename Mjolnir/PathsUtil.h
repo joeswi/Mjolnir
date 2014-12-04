@@ -12,6 +12,16 @@
 
 + (NSString *)currentWorkspace;
 
+#pragma mark - CIBuild Path
+
++ (NSString *)ciBuild;
+
++ (NSString *)ciBuildScript;
+
++ (NSString *)ciBuildSettings;
+
++ (NSString *)ciBuildUpdate;
+
 #pragma mark - Http Service Mock Path
 
 + (NSString *)httpServiceMock;
