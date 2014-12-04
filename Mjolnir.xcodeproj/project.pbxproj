@@ -11,6 +11,10 @@
 		AD4EFDEA1A032B8A0098C035 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4EFDE91A032B8A0098C035 /* Foundation.framework */; };
 		AD4EFDEF1A032B8A0098C035 /* Mjolnir.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = AD4EFDEE1A032B8A0098C035 /* Mjolnir.xcscheme */; };
 		AD4EFDF21A032B8A0098C035 /* Mjolnir.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4EFDF11A032B8A0098C035 /* Mjolnir.m */; };
+		AD634F531A304E3E00E1D5F0 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD634F511A304E3E00E1D5F0 /* MainWindowController.m */; };
+		AD634F541A304E3E00E1D5F0 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD634F521A304E3E00E1D5F0 /* MainWindowController.xib */; };
+		AD634F5A1A304FEF00E1D5F0 /* CIBuildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD634F581A304FEF00E1D5F0 /* CIBuildViewController.m */; };
+		AD634F5B1A304FEF00E1D5F0 /* CIBuildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD634F591A304FEF00E1D5F0 /* CIBuildViewController.xib */; };
 		AD927F2C1A036C5C00C86221 /* CCPDocumentationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD927F211A036C5C00C86221 /* CCPDocumentationManager.m */; };
 		AD927F2D1A036C5C00C86221 /* CCPProject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD927F231A036C5C00C86221 /* CCPProject.m */; };
 		AD927F2E1A036C5C00C86221 /* CCPRunOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD927F251A036C5C00C86221 /* CCPRunOperation.m */; };
@@ -29,6 +33,12 @@
 		AD4EFDEE1A032B8A0098C035 /* Mjolnir.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Mjolnir.xcscheme; path = Mjolnir.xcodeproj/xcshareddata/xcschemes/Mjolnir.xcscheme; sourceTree = SOURCE_ROOT; };
 		AD4EFDF01A032B8A0098C035 /* Mjolnir.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mjolnir.h; sourceTree = "<group>"; };
 		AD4EFDF11A032B8A0098C035 /* Mjolnir.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mjolnir.m; sourceTree = "<group>"; };
+		AD634F501A304E3E00E1D5F0 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		AD634F511A304E3E00E1D5F0 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		AD634F521A304E3E00E1D5F0 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		AD634F571A304FEF00E1D5F0 /* CIBuildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIBuildViewController.h; sourceTree = "<group>"; };
+		AD634F581A304FEF00E1D5F0 /* CIBuildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIBuildViewController.m; sourceTree = "<group>"; };
+		AD634F591A304FEF00E1D5F0 /* CIBuildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CIBuildViewController.xib; sourceTree = "<group>"; };
 		AD927F201A036C5C00C86221 /* CCPDocumentationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPDocumentationManager.h; sourceTree = "<group>"; };
 		AD927F211A036C5C00C86221 /* CCPDocumentationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPDocumentationManager.m; sourceTree = "<group>"; };
 		AD927F221A036C5C00C86221 /* CCPProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPProject.h; sourceTree = "<group>"; };
@@ -91,6 +101,7 @@
 			children = (
 				ADA138341A29834D009D8CE3 /* ScriptLauncher */,
 				AD927F1F1A036C5C00C86221 /* Helpers */,
+				AD634F4D1A304DEF00E1D5F0 /* UI */,
 				AD4EFDF01A032B8A0098C035 /* Mjolnir.h */,
 				AD4EFDF11A032B8A0098C035 /* Mjolnir.m */,
 				AD4EFDEC1A032B8A0098C035 /* Supporting Files */,
@@ -106,6 +117,27 @@
 				AD927F321A036CF200C86221 /* MjoInir.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD634F4D1A304DEF00E1D5F0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AD634F561A304FE400E1D5F0 /* CIBuild */,
+				AD634F501A304E3E00E1D5F0 /* MainWindowController.h */,
+				AD634F511A304E3E00E1D5F0 /* MainWindowController.m */,
+				AD634F521A304E3E00E1D5F0 /* MainWindowController.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AD634F561A304FE400E1D5F0 /* CIBuild */ = {
+			isa = PBXGroup;
+			children = (
+				AD634F571A304FEF00E1D5F0 /* CIBuildViewController.h */,
+				AD634F581A304FEF00E1D5F0 /* CIBuildViewController.m */,
+				AD634F591A304FEF00E1D5F0 /* CIBuildViewController.xib */,
+			);
+			path = CIBuild;
 			sourceTree = "<group>";
 		};
 		AD927F1F1A036C5C00C86221 /* Helpers */ = {
@@ -194,6 +226,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADA1383A1A298382009D8CE3 /* ScriptLauncher.scpt in Resources */,
+				AD634F5B1A304FEF00E1D5F0 /* CIBuildViewController.xib in Resources */,
+				AD634F541A304E3E00E1D5F0 /* MainWindowController.xib in Resources */,
 				AD4EFDEF1A032B8A0098C035 /* Mjolnir.xcscheme in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +245,8 @@
 				AD927F311A036C5C00C86221 /* CCPXCodeConsole.m in Sources */,
 				AD4EFDF21A032B8A0098C035 /* Mjolnir.m in Sources */,
 				ADA138381A29834D009D8CE3 /* ScriptLauncher.m in Sources */,
+				AD634F531A304E3E00E1D5F0 /* MainWindowController.m in Sources */,
+				AD634F5A1A304FEF00E1D5F0 /* CIBuildViewController.m in Sources */,
 				AD927F2C1A036C5C00C86221 /* CCPDocumentationManager.m in Sources */,
 				AD927F2D1A036C5C00C86221 /* CCPProject.m in Sources */,
 			);

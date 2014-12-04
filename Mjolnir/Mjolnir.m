@@ -11,12 +11,15 @@
 #import "ScriptLauncher.h"
 #import "CCPShellHandler.h"
 #import "CCPWorkspaceManager.h"
+#import "MainWindowController.h"
+#import "CIBuildViewController.h"
 
 static Mjolnir *sharedPlugin;
 
-@interface Mjolnir() 
+@interface Mjolnir()
 
 @property (nonatomic, strong, readwrite) NSBundle *bundle;
+
 @end
 
 @implementation Mjolnir
@@ -117,7 +120,8 @@ static Mjolnir *sharedPlugin;
 
 - (void)ciBuildMenuOnClick
 {
-    
+    CIBuildViewController *cibuild = [[CIBuildViewController alloc] init];
+    [MainWindowController showViewController:cibuild];
 }
 
 - (void)analyzeMenuOnClick
