@@ -14,8 +14,8 @@
 #import "MainWindowController.h"
 #import "CIBuildViewController.h"
 #import "PathsUtil.h"
-#import "CocoaLumberjack.h"
-#import "DDLogMacros.h"
+#import "Logger.h"
+
 
 static Mjolnir *sharedPlugin;
 
@@ -50,14 +50,11 @@ static Mjolnir *sharedPlugin;
 
 - (id)initWithBundle:(NSBundle *)plugin
 {
+    // 日志
     static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
-    [DDLog addLogger:[DDASLLogger sharedInstance]];
-    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
-    fileLogger.rollingFrequency = 60 * 60 * 24;
-    fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
-    [DDLog addLogger:fileLogger];
+    [[Logger defaultLogger] start];
     
-    DDLogDebug(@"Broken sprocket detected!");
+    LogDebug(@"initWithBundle %@", plugin);
     
     if (self = [super init]) {
         // reference to plugin's bundle, for resource access

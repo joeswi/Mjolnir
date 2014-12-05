@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD3BC9A51A31A80300B8CDE4 /* Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3BC9A41A31A80300B8CDE4 /* Logger.m */; };
 		AD4EFDE81A032B8A0098C035 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4EFDE71A032B8A0098C035 /* AppKit.framework */; };
 		AD4EFDEA1A032B8A0098C035 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD4EFDE91A032B8A0098C035 /* Foundation.framework */; };
 		AD4EFDEF1A032B8A0098C035 /* Mjolnir.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = AD4EFDEE1A032B8A0098C035 /* Mjolnir.xcscheme */; };
@@ -38,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD3BC9A31A31A80300B8CDE4 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
+		AD3BC9A41A31A80300B8CDE4 /* Logger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logger.m; sourceTree = "<group>"; };
 		AD4EFDE41A032B8A0098C035 /* Mjolnir.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mjolnir.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4EFDE71A032B8A0098C035 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		AD4EFDE91A032B8A0098C035 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -111,6 +114,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD3BC9A11A31A7E300B8CDE4 /* DFX */ = {
+			isa = PBXGroup;
+			children = (
+				AD3BC9A21A31A7E300B8CDE4 /* Logger */,
+			);
+			path = DFX;
+			sourceTree = "<group>";
+		};
+		AD3BC9A21A31A7E300B8CDE4 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				AD3BC9A31A31A80300B8CDE4 /* Logger.h */,
+				AD3BC9A41A31A80300B8CDE4 /* Logger.m */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
 		AD4EFDDB1A032B8A0098C035 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +163,7 @@
 				ADE649D91A31A1C400511F6B /* OpenSource */,
 				ADA138341A29834D009D8CE3 /* ScriptLauncher */,
 				AD927F1F1A036C5C00C86221 /* Helpers */,
+				AD3BC9A11A31A7E300B8CDE4 /* DFX */,
 				AD634F4D1A304DEF00E1D5F0 /* UI */,
 				AD4EFDF01A032B8A0098C035 /* Mjolnir.h */,
 				AD4EFDF11A032B8A0098C035 /* Mjolnir.m */,
@@ -364,6 +385,7 @@
 				ADA138381A29834D009D8CE3 /* ScriptLauncher.m in Sources */,
 				ADE64A001A31A1C400511F6B /* DDDispatchQueueLogFormatter.m in Sources */,
 				ADE649FA1A31A1C400511F6B /* DDASLLogCapture.m in Sources */,
+				AD3BC9A51A31A80300B8CDE4 /* Logger.m in Sources */,
 				ADE649FB1A31A1C400511F6B /* DDASLLogger.m in Sources */,
 				AD634F531A304E3E00E1D5F0 /* MainWindowController.m in Sources */,
 				AD634F5A1A304FEF00E1D5F0 /* CIBuildViewController.m in Sources */,
