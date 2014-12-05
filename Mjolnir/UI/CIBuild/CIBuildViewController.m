@@ -8,6 +8,7 @@
 
 #import "CIBuildViewController.h"
 #import "PathsUtil.h"
+#import "Logger.h"
 
 @interface CIBuildViewController () <NSComboBoxDelegate, NSComboBoxDataSource>
 
@@ -29,39 +30,33 @@
     [self dismiss];
 }
 
-
-- (id)init
+- (void)viewDidInit
 {
-    self = [super init];
-    if (self)
-    {
-        self.itemInfos = [NSMutableArray array];
-    }
-    return self;
+    [super viewDidInit];
+    
+    self.itemInfos = [NSMutableArray array];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do view setup here.
+    
     self.targetComboBox.delegate = self;
     self.targetComboBox.dataSource = self;
     
-    
     [self fetchData];
-    NSLog(@"========================");
-
-    [self.targetComboBox selectItemAtIndex:0];
 }
 
 #pragma mark - NSComboBoxDataSource
 
 - (NSInteger)numberOfItemsInComboBox:(NSComboBox *)aComboBox
 {
+    LogDebug(@"CIBuildViewController|numberOfItemsInComboBox, aComboBox = %@", aComboBox);
     return [self.itemInfos count];
 }
 
 - (id)comboBox:(NSComboBox *)aComboBox objectValueForItemAtIndex:(NSInteger)index
 {
+    LogDebug(@"CIBuildViewController|comboBox:objectValueForItemAtIndex, aComboBox = %@, index = %ld", aComboBox, index);
     return [NSString stringWithFormat:@"%@", self.itemInfos[index]];
 }
 
@@ -79,6 +74,10 @@
     [self.itemInfos removeAllObjects];
     [self.itemInfos addObjectsFromArray:@[@"adhoc", @"appstore"]];
     [self.targetComboBox reloadData];
+    if ([self.itemInfos count] > 0)
+    {
+        [self.targetComboBox selectItemAtIndex:0];
+    }
 }
 
 @end

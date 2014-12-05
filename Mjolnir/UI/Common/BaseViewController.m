@@ -27,7 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do view setup here.
+    
+    [self viewDidInit];
 }
 
 - (void)present
@@ -39,6 +40,11 @@
 {
     [[[self view] window] close];
     [NSApp endSheet:[[self view] window]];
+}
+
+- (void)viewDidInit
+{
+    
 }
 
 @end
