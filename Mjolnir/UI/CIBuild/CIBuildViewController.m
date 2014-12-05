@@ -7,10 +7,13 @@
 //
 
 #import "CIBuildViewController.h"
+#import "PathsUtil.h"
 
 @interface CIBuildViewController () <NSComboBoxDelegate, NSComboBoxDataSource>
 
 @property (weak) IBOutlet NSComboBox *targetComboBox;
+
+@property (nonatomic, strong) NSMutableArray *itemInfos;
 
 @end
 
@@ -26,12 +29,27 @@
     [self dismiss];
 }
 
+
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+        self.itemInfos = [NSMutableArray array];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
-    
     self.targetComboBox.delegate = self;
     self.targetComboBox.dataSource = self;
+    
+    
+    [self fetchData];
+    NSLog(@"========================");
+
     [self.targetComboBox selectItemAtIndex:0];
 }
 
@@ -39,12 +57,12 @@
 
 - (NSInteger)numberOfItemsInComboBox:(NSComboBox *)aComboBox
 {
-    return 3;
+    return [self.itemInfos count];
 }
 
 - (id)comboBox:(NSComboBox *)aComboBox objectValueForItemAtIndex:(NSInteger)index
 {
-    return [NSString stringWithFormat:@"%ld", index];
+    return [NSString stringWithFormat:@"%@", self.itemInfos[index]];
 }
 
 #pragma mark - NSComboBoxDelegate
@@ -52,6 +70,15 @@
 - (void)comboBoxSelectionDidChange:(NSNotification *)notification
 {
     
+}
+
+#pragma mark - Private
+
+- (void)fetchData
+{
+    [self.itemInfos removeAllObjects];
+    [self.itemInfos addObjectsFromArray:@[@"adhoc", @"appstore"]];
+    [self.targetComboBox reloadData];
 }
 
 @end
