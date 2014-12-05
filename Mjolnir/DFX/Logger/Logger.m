@@ -8,6 +8,12 @@
 
 #import "Logger.h"
 
+@interface Logger ()
+
+@property (nonatomic, strong) DDFileLogger *fileLogger;
+
+@end
+
 @implementation Logger
 
 + (Logger *)defaultLogger
@@ -26,10 +32,10 @@
     if (self)
     {
         // 添加文件日志
-        DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
-        fileLogger.rollingFrequency = 60 * 60 * 24;
-        fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
-        [DDLog addLogger:fileLogger];
+        self.fileLogger = [[DDFileLogger alloc] init];
+        self.fileLogger.rollingFrequency = 60 * 60 * 24;
+        self.fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
+        [DDLog addLogger:self.fileLogger];
     }
     return self;
 }
@@ -37,6 +43,11 @@
 - (void)start
 {
     [Logger defaultLogger];
+}
+
+- (NSString *)currentLogFilePath
+{
+    return [[self.fileLogger currentLogFileInfo] filePath];
 }
 
 @end

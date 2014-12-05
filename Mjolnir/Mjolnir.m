@@ -50,8 +50,6 @@ static Mjolnir *sharedPlugin;
 
 - (id)initWithBundle:(NSBundle *)plugin
 {
-    // 日志
-    static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
     [[Logger defaultLogger] start];
     
     LogDebug(@"initWithBundle %@", plugin);
@@ -106,6 +104,13 @@ static Mjolnir *sharedPlugin;
                                                                action:@selector(gotoCrashExplorerMenuOnClick)
                                                         keyEquivalent:@""];
             gotoCrashExplorer.target = self;
+            
+            // Mjolnir -> Goto -> Mjolnir Console
+            NSMenuItem *gotoMjolnirConsole = [[gotoMenu submenu] addItemWithTitle:@"Mjolnir Console"
+                                                                           action:@selector(gotoMjolnirConsoleMenuOnClick)
+                                                                    keyEquivalent:@""];
+            gotoMjolnirConsole.target = self;
+            
         }
     }
     return self;
@@ -147,6 +152,15 @@ static Mjolnir *sharedPlugin;
 {
     NSURL *url = [[NSURL alloc] initWithString:@"http://221.226.48.130:2424/CrashExplorer"];
     [[NSWorkspace sharedWorkspace] openURL:url];
+}
+
+- (void)gotoMjolnirConsoleMenuOnClick
+{
+    NSString *logFilePath = [[Logger defaultLogger] currentLogFilePath];
+    LogDebug(@"Start MjolnirConsole...");
+    LogDebug(@"logFilePath = %@", logFilePath);
+    NSString *command = [NSString stringWithFormat:@"tail -f -n 500 \"%@\"", logFilePath];
+    [[ScriptLauncher defaultLauncher] execute:@[command]];
 }
 
 - (void)showMessage:(NSString *)message

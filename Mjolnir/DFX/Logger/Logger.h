@@ -12,10 +12,15 @@
 #define Log         DDLogDebug
 #define LogDebug    DDLogDebug
 
+// 日志级别
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+
 @interface Logger : NSObject
 
 + (Logger *)defaultLogger;
 
 - (void)start;
+
+- (NSString *)currentLogFilePath;
 
 @end
