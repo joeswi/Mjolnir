@@ -231,13 +231,13 @@ unsigned long long const kDDDefaultLogFilesDiskQuota   = 20 * 1024 * 1024; // 20
 #if TARGET_OS_IPHONE
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString *baseDir = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
-    NSString *logsDirectory = [baseDir stringByAppendingPathComponent:@"Mjolnir-Logs"];
+    NSString *logsDirectory = [baseDir stringByAppendingPathComponent:@"Logs/Mjolnir"];
 
 #else
     NSString *appName = [[NSProcessInfo processInfo] processName];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     NSString *basePath = ([paths count] > 0) ? paths[0] : NSTemporaryDirectory();
-    NSString *logsDirectory = [[basePath stringByAppendingPathComponent:@"Mjolnir-Logs"] stringByAppendingPathComponent:appName];
+    NSString *logsDirectory = [[basePath stringByAppendingPathComponent:@"Logs/Mjolnir"] stringByAppendingPathComponent:appName];
 
 #endif
 
